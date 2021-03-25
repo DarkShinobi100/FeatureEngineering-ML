@@ -37,7 +37,16 @@ namespace FeatureExtraction
                     {
                         var point = shape.GetPart((uint)i);
                         var rect = new Rectangle(point);
-                        Dlib.DrawRectangle(img, rect, color: new RgbPixel(255, 255, 0), thickness: 4);
+
+                        //check for key points
+                        if(i==22 || i==23 || i== 40 || i == 43 || i == 34 || i == 52 || i == 58 || i == 49 || i == 55)
+                        {
+                            Dlib.DrawRectangle(img, rect, color: new RgbPixel(255, 0, 0), thickness: 4);
+                        }
+                        else
+                        {
+                            Dlib.DrawRectangle(img, rect, color: new RgbPixel(255, 255, 0), thickness: 4);
+                        }
                     }
                 }
 
