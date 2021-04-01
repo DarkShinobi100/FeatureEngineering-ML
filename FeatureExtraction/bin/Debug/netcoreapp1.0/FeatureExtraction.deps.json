@@ -1,0 +1,77 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v1.0",
+    "signature": "e071c37eaec84315179ab046fa95b72c31e24359"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v1.0": {
+      "featureextraction/1.0.0": {
+        "dependencies": {
+          "DlibDotNet": "19.21.0.20210302"
+        },
+        "runtime": {
+          "FeatureExtraction.dll": {}
+        }
+      },
+      "dlibdotnet/19.21.0.20210302": {
+        "runtimeTargets": {
+          "runtimes/centos-x64/native/libDlibDotNetNative.so": {
+            "rid": "centos-x64",
+            "assetType": "native"
+          },
+          "runtimes/centos-x64/native/libDlibDotNetNativeDnn.so": {
+            "rid": "centos-x64",
+            "assetType": "native"
+          },
+          "runtimes/linux-x64/native/libDlibDotNetNative.so": {
+            "rid": "linux-x64",
+            "assetType": "native"
+          },
+          "runtimes/linux-x64/native/libDlibDotNetNativeDnn.so": {
+            "rid": "linux-x64",
+            "assetType": "native"
+          },
+          "runtimes/osx-x64/native/libDlibDotNetNative.dylib": {
+            "rid": "osx-x64",
+            "assetType": "native"
+          },
+          "runtimes/osx-x64/native/libDlibDotNetNativeDnn.dylib": {
+            "rid": "osx-x64",
+            "assetType": "native"
+          },
+          "runtimes/win-x64/native/DlibDotNetNative.dll": {
+            "rid": "win-x64",
+            "assetType": "native"
+          },
+          "runtimes/win-x64/native/DlibDotNetNativeDnn.dll": {
+            "rid": "win-x64",
+            "assetType": "native"
+          },
+          "runtimes/win-x86/native/DlibDotNetNative.dll": {
+            "rid": "win-x86",
+            "assetType": "native"
+          },
+          "runtimes/win-x86/native/DlibDotNetNativeDnn.dll": {
+            "rid": "win-x86",
+            "assetType": "native"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "featureextraction/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "dlibdotnet/19.21.0.20210302": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Rj6tV9roTjt90471rZeu3UHWdqx8gy7cxiMmJupryX8M3blZQ92mvBSr59+/Eg+WwKXg2OSxx2Q1xEGeRnKt6g==",
+      "path": "dlibdotnet/19.21.0.20210302",
+      "hashPath": "dlibdotnet.19.21.0.20210302.nupkg.sha512"
+    }
+  }
+}

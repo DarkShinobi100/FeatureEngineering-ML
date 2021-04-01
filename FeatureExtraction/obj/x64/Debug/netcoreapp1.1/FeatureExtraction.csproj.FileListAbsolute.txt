@@ -1,0 +1,7 @@
+C:\Users\User\Documents\C++\MachineLearning\FeatureEngineering\FeatureExtraction\bin\x64\Debug\netcoreapp1.1\FeatureExtraction.deps.json
+C:\Users\User\Documents\C++\MachineLearning\FeatureEngineering\FeatureExtraction\bin\x64\Debug\netcoreapp1.1\FeatureExtraction.runtimeconfig.json
+C:\Users\User\Documents\C++\MachineLearning\FeatureEngineering\FeatureExtraction\bin\x64\Debug\netcoreapp1.1\FeatureExtraction.runtimeconfig.dev.json
+C:\Users\User\Documents\C++\MachineLearning\FeatureEngineering\FeatureExtraction\obj\x64\Debug\netcoreapp1.1\FeatureExtraction.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\C++\MachineLearning\FeatureEngineering\FeatureExtraction\obj\x64\Debug\netcoreapp1.1\FeatureExtraction.AssemblyInfo.cs
+C:\Users\User\Documents\C++\MachineLearning\FeatureEngineering\FeatureExtraction\obj\x64\Debug\netcoreapp1.1\FeatureExtraction.csprojAssemblyReference.cache
+C:\Users\User\Documents\C++\MachineLearning\FeatureEngineering\FeatureExtraction\obj\x64\Debug\netcoreapp1.1\FeatureExtraction.AssemblyInfoInputs.cache
