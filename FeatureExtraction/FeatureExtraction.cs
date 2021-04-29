@@ -81,12 +81,6 @@ namespace FeatureExtraction
                     float RightLip = 0.0f;
                     float LipWidth = 0.0f;
                     float LipHeight = 0.0f;
-
-                    float NonNormalisedLeftEyebrowDistance = 0.0f;
-                    float NonNormalisedRightEyebrowDistance = 0.0f;
-                    float NonNormalisedLeftLipDistance = 0.0f;
-                    float NonNormalisedRightLipDistance = 0.0f;
-
                     // load input image
 
                     var img = Dlib.LoadImage<RgbPixel>(Images[i]);
@@ -110,26 +104,26 @@ namespace FeatureExtraction
                             if (j == 19 || j == 20 || j == 21 || j == 22)
                             {
                                 var Left = point - shape.GetPart((uint)39);
-                                NonNormalisedLeftEyebrowDistance += (float)Left.Length;
+                                LeftEyebrow += (float)Left.Length/(float)(shape.GetPart((uint)21) - shape.GetPart((uint)39)).Length;
                                 Dlib.DrawRectangle(img, rect, color: new RgbPixel(255, 0, 0), thickness: 4);
                             }
                             //Right eyebrow
                             else if (j == 23 || j == 24 || j == 25 || j == 26)
                             {
                                 var Right = point - shape.GetPart((uint)42);
-                                NonNormalisedRightEyebrowDistance += (float)Right.Length;
+                                RightEyebrow += (float)Right.Length / (float)(shape.GetPart((uint)22) - shape.GetPart((uint)42)).Length;
                                 Dlib.DrawRectangle(img, rect, color: new RgbPixel(200, 0, 0), thickness: 4);
                             }
                             //left lip
                             else if (j == 49 || j == 50 || j == 51)
                             {
-                                NonNormalisedLeftLipDistance += (float)(point - shape.GetPart((uint)33)).Length;
+                                LeftLip += (float)(point - shape.GetPart((uint)33)).Length / (float)(shape.GetPart((uint)51) - shape.GetPart((uint)33)).Length;
                                 Dlib.DrawRectangle(img, rect, color: new RgbPixel(0, 255, 0), thickness: 4);
                             }
                             //Right lip
                             else if (j == 53 || j == 54 || j == 55)
                             {
-                                NonNormalisedRightLipDistance += (float)(point - shape.GetPart((uint)33)).Length;
+                                RightLip += (float)(point - shape.GetPart((uint)33)).Length / (float)(shape.GetPart((uint)51) - shape.GetPart((uint)33)).Length;
                                 Dlib.DrawRectangle(img, rect, color: new RgbPixel(0, 200, 0), thickness: 4);
                             }
                             else
@@ -138,10 +132,6 @@ namespace FeatureExtraction
                             }
 
                         }
-                        LeftEyebrow = NonNormalisedLeftEyebrowDistance / (float)(shape.GetPart((uint)21) - shape.GetPart((uint)39)).Length;
-                        RightEyebrow = NonNormalisedRightEyebrowDistance / (float)(shape.GetPart((uint)22) - shape.GetPart((uint)42)).Length;
-                        LeftLip = NonNormalisedLeftLipDistance / (float)(shape.GetPart((uint)51) - shape.GetPart((uint)33)).Length;
-                        RightLip = NonNormalisedRightLipDistance / (float)(shape.GetPart((uint)51) - shape.GetPart((uint)33)).Length;
                         LipWidth = (float)(shape.GetPart((uint)54) - shape.GetPart((uint)48)).Length / (float)(shape.GetPart((uint)51) - shape.GetPart((uint)33)).Length;
                         LipHeight = (float)(shape.GetPart((uint)57) - shape.GetPart((uint)51)).Length / (float)(shape.GetPart((uint)51) - shape.GetPart((uint)33)).Length;
 
