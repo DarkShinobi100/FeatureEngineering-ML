@@ -171,7 +171,7 @@ namespace FeatureExtraction
                     if (i == 0 && Start)
                     {
                         //The header definiteion of the CSV file
-                        string header = "label, leftEyebrow,rightEyebrow,leftLip,rightLip,lipHeight,lipWidth,Emotion\n";
+                        string header = "label, leftEyebrow,rightEyebrow,leftLip,rightLip,lipHeight,lipWidth\n";
 
                         //create the CSV file and fill in the first line with the header
                         System.IO.File.WriteAllText(@"feature_vectors.csv", header);
@@ -179,7 +179,7 @@ namespace FeatureExtraction
                     using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"feature_vectors.csv", true))
                     {
                         Console.WriteLine("Saving...");
-                        file.WriteLine("" + "," + LeftEyebrow + "," + RightEyebrow + "," + LeftLip + "," + RightLip + "," + LipHeight + "," + LipWidth + "," + Emotion);
+                        file.WriteLine(Emotion + "," + LeftEyebrow + "," + RightEyebrow + "," + LeftLip + "," + RightLip + "," + LipHeight + "," + LipWidth);
                         FeatureVector.Clear();
                     }
                 }
